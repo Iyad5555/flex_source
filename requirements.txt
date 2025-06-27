@@ -1,0 +1,13 @@
+telethon
+mention
+aiohttp
+deep-translator
+langdetect
+gpytranslate
+sqlalchemy
+emoji
+ping3
+Pillow
+pySmartDL
+user_agent
+pybase64
