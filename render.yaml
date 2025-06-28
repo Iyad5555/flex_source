@@ -12,4 +12,4 @@ services:
         sync: false
     buildCommand: pip install -r requirements.txt
     startCommand: python3 modified.py
-    autodeploy: true
+    env: python
