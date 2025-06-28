@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: flex-source
+    name: flex-source                                                                                   
+    runtime: python-3.10.4  # جرب 3.9.x إذا استمرت المشكلة
     plan: free
     envVars:
       - key: API_ID
