@@ -1,15 +1,14 @@
 services:
-  - type: web
-    name: flex-source                                                                                   
-    runtime: python-3.10.4  # جرب 3.9.x إذا استمرت المشكلة
+  - type: worker
+    name: flex-userbot
+    env: python
     plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python modified.py
     envVars:
       - key: API_ID
-        sync: false
+        value: <YOUR_API_ID>
       - key: API_HASH
-        sync: false
+        value: <YOUR_API_HASH>
       - key: STRING_SESSION
-        sync: false
-    buildCommand: pip install -r requirements.txt
-    startCommand: python3 modified.py
-    env: python
+        value: <YOUR_STRING_SESSION>
