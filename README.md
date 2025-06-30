@@ -1,4 +1,4 @@
-# Tepton Source - سورس تيبثون
+# flex Source - سورس فليكس
 
 ## الوصف
 سورس تيبثون هو بوت Telegram متقدم مبني باستخدام مكتبة Telethon. يوفر العديد من الميزات والأوامر التفاعلية لإدارة حسابات Telegram.
@@ -12,7 +12,7 @@
 - إدارة الملفات والوسائط
 
 ## متطلبات التشغيل
-- Python 3.11+
+- Python 3.10.9
 - حساب Telegram Developer
 - API_ID و API_HASH من my.telegram.org
 - STRING_SESSION (جلسة مشفرة)
