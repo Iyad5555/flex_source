@@ -2,7 +2,7 @@ services:
   - type: web
     name: flex-source
     plan: free  # الخطة المجانية
-    runtime: python  # أو python-3.10.4
+    runtime: python-3.10.9  # أو python-3.10.4
     envVars:
       - key: API_ID
         sync: false
