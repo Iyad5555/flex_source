@@ -155,7 +155,7 @@ api_id = os.environ.get("API_ID", None)
 api_hash = os.environ.get("API_HASH", None)
 session_string = os.environ.get("STRING_SESSION", None)
 
-session_name = 'hunter source'
+session_name = 'flex source'
 response_file = 'responss.pkl'
 published_messages_file = 'publihed_messages.pkl'
 muted_users_file = 'mute_usrs.pkl'
@@ -8205,3 +8205,26 @@ with client:
     client.loop.run_until_complete(main())    
     
     
+
+# ====== Flask Web Server Integration ======
+
+from flask import Flask
+import threading
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Flex Source is running!"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
+
+flask_thread = threading.Thread(target=run_flask)
+flask_thread.start()
+
+# تشغيل العميل
+loop = asyncio.get_event_loop()
+loop.create_task(update_username())  # إذا عندك مهام تعمل بالخلفية
+client.run_until_disconnected()
